@@ -1,12 +1,19 @@
-name: First Workflow
+name: Second Workflow
 
 on:
   push:
 
 jobs:
-  hello-job:
+  demo:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print Message
-        run: echo "Hello Krishna"
+
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: List Files
+        run: ls -la
+
+      - name: Show Website Content
+        run: cat index.html
