@@ -1,19 +1,18 @@
-name: Second Workflow
+name: Variables Demo
 
 on:
   push:
+
+env:
+  APP_NAME: Portfolio
+  ENVIRONMENT: Dev
 
 jobs:
   demo:
     runs-on: ubuntu-latest
 
     steps:
-
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: List Files
-        run: ls -la
-
-      - name: Show Website Content
-        run: cat index.html
+      - name: Print Variables
+        run: |
+          echo "Application: $APP_NAME"
+          echo "Environment: $ENVIRONMENT"
