@@ -1,0 +1,13 @@
+name: Repository Variables Demo
+
+on:
+  push
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Read Repository Variable
+        run: |
+          echo "${{ vars.APP_NAME }}"    # ye secrets and variables mai define kiya hua h sidha wha se value uthaywga
