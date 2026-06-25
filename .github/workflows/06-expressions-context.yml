@@ -1,7 +1,7 @@
 name: Expressions & Context Demo
 
 on:
-  workflow_dispatch:
+  push
 
 jobs:
   demo:
