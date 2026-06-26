@@ -1,0 +1,24 @@
+name: Steps Context Demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  demo:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Generate Output
+
+        id: app
+
+        run: |
+          echo "name=Krishna-App" >> $GITHUB_OUTPUT
+
+      - name: Print Output
+
+        run: |
+          echo "Application = ${{ steps.app.outputs.name }}"
